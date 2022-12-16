@@ -47,13 +47,16 @@ export default function Quiz() {
             toast.error(`Please Enter the Player's Name`)
         }
     }
+    
     return (
         <div className='quiz-main'>
-            <ToastContainer />
-            <h1>React Quiz</h1>
+            <ToastContainer/>
+            <h1>Trivia Test</h1>
+            
+            <img src='https://www.citypng.com/public/uploads/small/11664660085zo9x5g6fbeuerq1il2ducfocjmgz2moerkrs95u3m59nncbckip4ipp4cxkkpjons43aj316vv7e8d31v4jc0b44fhtgvk510lpx.png' alt='question marks'></img>
             <TextField
                 required
-                style={{ marginBottom: 20 }}
+                style={{ marginBottom: 20}}
                 fullWidth
                 id="outlined-basic"
                 label="Enter Your Name"
@@ -76,7 +79,7 @@ export default function Quiz() {
                 onClick={getQuiz}
                 variant="contained"
                 style={{ marginTop: 10, marginRight: 5 }}>
-                GET QUIZ
+                START QUIZ
             </Button>
 
             <Button
@@ -86,5 +89,6 @@ export default function Quiz() {
                 CHECK LEADERBOARD
             </Button>
         </div>
+        
     )
 }
