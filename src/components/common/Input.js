@@ -17,6 +17,7 @@ export default function BasicTextFields({
                 type="number"
                 id="outlined-basic"
                 label="Number of Questions"
+                InputProps={{ inputProps: { min: "1", max: "10", step: "1" } }}
                 variant="outlined"
                 onChange={(e) => setQuizCount(e.target.value)}
                 value={quizCount}

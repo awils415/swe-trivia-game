@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import Card from './common/Card';
+import Card from '../components/common/Card';
 import { database } from '../firebase-config';
 import { addDoc, collection } from 'firebase/firestore';
 import moment from 'moment';
+
 export default function PlayQuiz() {
     const { state } = useLocation();
     const navigate = useNavigate();
@@ -15,7 +16,7 @@ export default function PlayQuiz() {
     const [quizDifficulty, setQuizDifficulty] = useState('');
     const [result, setResult] = useState(0);
     const [playerName, setPlayerName] = useState('');
-    const databaseRef = collection(database, 'Leader Board')
+    const databaseRef = collection(database, 'Leader board')
     React.useEffect(() => {
         const { quizData, quizCount, quizType, quizDifficulty } = state;
         setQuesArray(quizData)
@@ -65,7 +66,7 @@ export default function PlayQuiz() {
                 </div>
             ) : (
                 <div className='submit-container'>
-                    <h2>The Quiz is now finished..</h2>
+                    <h2>You finished the quiz!</h2>
                     <p>You can Submit your Score..</p>
                     <Button
                         onClick={submitQuiz}

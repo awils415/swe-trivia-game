@@ -4,8 +4,9 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import { database } from '../firebase-config';
 import { getDocs, collection } from 'firebase/firestore';
-import Table from './common/Table';
+import Table from '../components/common/Table';
 import Divider from '@mui/material/Divider';
+
 export default function Result() {
     const databaseRef = collection(database, 'Leader Board')
     const navigate = useNavigate();
