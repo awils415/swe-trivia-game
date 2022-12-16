@@ -1,8 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://cdn.pixabay.com/photo/2014/04/02/10/56/cloud-304979__480.png");
+@import url("https://www.citypng.com/public/uploads/small/11664660085zo9x5g6fbeuerq1il2ducfocjmgz2moerkrs95u3m59nncbckip4ipp4cxkkpjons43aj316vv7e8d31v4jc0b44fhtgvk510lpx.png");
 
 .app-main {
   text-align: center;
-  font-family: "Luxurious Roman", cursive;
+  font-family: "Black Ops One";
+  color: white;
+  background-color: #83b5db;
+  background-color: transparent;
+  background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+  animation: animate 5s linear infinite;
+  -webkit-background-size: 500%;
+  background-size: 500%;
+  text-align: center;
+  top: 125px;
+}
+
+h1 {
+  font-size: 40px;
+  position: relative;
+}
+
+img {
+  width: 500px;
+  height: 200px;
+  padding-bottom: 20px;
 }
 
 h3 {
@@ -10,7 +32,7 @@ h3 {
 }
 
 .quiz-main {
-  padding: 20px;
+  padding: 100px;
 }
 
 .question-type {
@@ -45,4 +67,16 @@ h3 {
   align-items: center;
   height: 100vh;
   flex-direction: column;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0 100%;
+  }
+  50%{
+    background-position: 100% 0;
+  }
+  100%{
+    background-position: 0 100%;
+  }
 }
