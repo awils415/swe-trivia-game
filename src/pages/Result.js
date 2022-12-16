@@ -8,7 +8,7 @@ import Table from '../components/common/Table';
 import Divider from '@mui/material/Divider';
 
 export default function Result() {
-    const databaseRef = collection(database, 'Leader Board')
+    const databaseRef = collection(database, 'Leader board')
     const navigate = useNavigate();
     const { state } = useLocation();
     const [finalResult, setFinalResult] = React.useState(null);
@@ -48,7 +48,7 @@ export default function Result() {
                 Play Again
             </Button>
             <Divider />
-            <h2>Leader Board</h2>
+            <h2>Leaderboard</h2>
             <div style={{ margin: 20 }}>
                 <Table leaderBoardData={leaderBoardData} />
             </div>
